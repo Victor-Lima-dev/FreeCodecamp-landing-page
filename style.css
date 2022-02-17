@@ -1,0 +1,184 @@
+@charset "UTF-8";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+:root {
+    --button: #FF0000;
+    --main-background:  #C4C4C4;
+    --background: #E5E5E5;
+    --text: #000;
+    --footer: #000;
+    --text-description: #9C9696;
+  }
+
+body
+{
+    background-color: var(--background);
+}
+
+li
+{
+    list-style: none;
+}
+span
+{
+    display: block;
+}
+a
+{
+    text-decoration: none;
+}
+
+.estrutura
+{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "header header header"
+    "preco  produtos produtos"
+    "preco  produtos produtos"
+    "footer footer footer"
+    ;
+    padding-top: 15px;
+}
+
+.header
+{
+    grid-area: header;
+    background: transparent;
+}
+
+.header ul
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header ul a 
+{
+    display: block;
+    padding: 10px;
+    color: black;
+    font-weight: 700;
+    font-size: 1.5em;
+    transition: .7s;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.header ul a:hover
+{
+    letter-spacing: 2px;
+    font-size: 1.7em;
+}
+
+
+.preco
+{
+    grid-area: preco;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.preco h1
+{
+    font-size: 3.5em;
+    line-height: 1.2em;
+    text-align: center;
+}
+.preco span{
+    color: var(--text-description);
+    margin: 0px auto 25px auto;
+    text-align: center;
+}
+.preco h2{
+    font-size: 3em;
+    text-align: center;
+}
+
+.botao
+{
+    margin: 30px auto;
+}
+
+.preco a
+{
+    border-radius: 20px;
+    padding: 20px;
+    background-color: var(--button);
+    color: white;
+    font-weight: bold;
+}
+
+.produtos
+{
+    grid-area: produtos;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-background);
+    padding: 10px;
+    border-radius: 8px;
+}
+img
+{
+    max-width: 100%;
+}
+
+.tenis img + img {
+    margin-left: 20px;
+}
+
+.footer
+{
+    grid-area: footer;
+}
+
+.footer ul
+{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.footer ul > li > a
+{
+    background-color:var(--button);
+    display: block;
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+    min-width: 100px;
+    text-align: center;
+}
+
+.footer ul a
+{
+    display: block;
+    padding: 30px;
+    color: black;
+}
+
+.redes-sociais
+{
+    display: flex;
+  }
+
+  @media (max-width: 1024px)
+  {
+
+.tenis
+{
+    display: flex;
+    flex-direction: column;
+    background: white;
+}
+  }
